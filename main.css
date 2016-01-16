@@ -1,0 +1,118 @@
+.border {
+    border-right: 2px solid black;
+}
+
+.nav ul li {
+    list-style-type: none;
+    padding: 5px;
+    display: inline;
+}
+
+.nav {
+    border: 2px solid black;
+    background-color: #ffb4b0;
+}
+
+.options {
+    box-sizing: border-box;
+    border: 2px solid black;
+    background-color: #4dd7fa;
+    float: left;
+    width: 20%;
+    margin: 5px;
+    margin-left: 0;
+    height: 100%;
+    padding: 10px;
+    height: 400px;
+}
+
+.songlist {
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 5px;
+    margin-right: 0;
+    background-color: #fefac0;
+    border: 2px solid black;
+    padding: 10px 0 3em 2em;
+    width: 78%;
+    height: 100%;
+    height: 400px;
+}
+
+.songlist li {
+    list-style-type: none;
+    float: left;
+    padding: 0 2px;
+}
+.options form label {
+    margin: 100px 0 0 0;
+}
+form {
+    line-height: 30px;
+}
+
+.filter {
+    text-decoration: none;
+    text-align: center;
+    margin-left: 50px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: lightgray;
+    padding: 3px 10px;
+}
+.filter:link {
+    color: black;
+}
+
+.filter:visited {
+    color:black;
+}
+
+ footer {
+    text-align: center;
+    margin-top: 100px;
+    border-top: 1px solid gray;
+ }
+
+
+/*
+UGH
+*/
+@media (max-width: 899px) {
+    .options {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+    .options a{
+        margin: 0;
+    }
+    table {
+        text-align: left;
+        margin: 0px auto;
+    }
+    .songlist {
+        margin: 5 0 0 0;
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
