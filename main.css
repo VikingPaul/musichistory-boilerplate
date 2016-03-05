@@ -77,6 +77,7 @@ form {
 #musicForm input {
     display: block;
     margin: 5px auto;
+    padding: 5px;
 }
 footer {
    text-align: center;
