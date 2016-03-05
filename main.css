@@ -1,7 +1,3 @@
-.border {
-    border-right: 2px solid black;
-}
-
 .nav ul li {
     list-style-type: none;
     padding: 5px;
@@ -9,8 +5,11 @@
 }
 
 .nav {
+    box-sizing: border-box;
+    margin: 0 14%;
     border: 2px solid black;
     background-color: #ffb4b0;
+    width: 72%;
 }
 
 .options {
@@ -19,8 +18,7 @@
     background-color: #4dd7fa;
     float: left;
     width: 20%;
-    margin: 5px;
-    margin-left: 0;
+    margin: 1% 1% 0 14%;
     height: 100%;
     padding: 10px;
     height: 400px;
@@ -29,12 +27,11 @@
 .songlist {
     box-sizing: border-box;
     display: inline-block;
-    margin: 5px;
-    margin-right: 0;
+    margin: 1% 14% 0 1%;
     background-color: #fefac0;
     border: 2px solid black;
     padding: 10px 0 3em 2em;
-    width: 78%;
+    width: 50%;
     height: 100%;
     height: 400px;
 }
@@ -42,7 +39,7 @@
 .songlist li {
     list-style-type: none;
     float: left;
-    padding: 0 2px;
+    padding: 0 5px;
 }
 .options form label {
     margin: 100px 0 0 0;
@@ -51,14 +48,17 @@ form {
     line-height: 30px;
 }
 
+.div {
+    text-align: center;
+}
+
 .filter {
     text-decoration: none;
     text-align: center;
-    margin-left: 50px;
     border: 2px solid black;
     border-radius: 5px;
     background-color: lightgray;
-    padding: 3px 10px;
+    padding: 3px 45px;
 }
 .filter:link {
     color: black;
@@ -67,12 +67,26 @@ form {
 .filter:visited {
     color:black;
 }
-
- footer {
-    text-align: center;
-    margin-top: 100px;
-    border-top: 1px solid gray;
- }
+#musicForm {
+    visibility: hidden;
+    width: 20%;
+    position: absolute;
+    left: 40%;
+    top: 10%;
+}
+#musicForm input {
+    display: block;
+    margin: 5px auto;
+}
+footer {
+   text-align: center;
+   margin-top: 100px;
+   border-top: 1px solid gray;
+}
+ul li:nth-child(2n) {
+   border-right: 2px solid black;
+   border-left: 2px solid black;
+}
 
 
 /*
@@ -81,7 +95,7 @@ UGH
 @media (max-width: 899px) {
     .options {
         float: none;
-        width: 100%;
+        width: 72%;
         text-align: center;
     }
     .options a{
@@ -92,27 +106,8 @@ UGH
         margin: 0px auto;
     }
     .songlist {
-        margin: 5 0 0 0;
-        width: 100%;
+        margin: 5px 0 0 14%;
+        width: 72%;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
