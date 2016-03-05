@@ -9,12 +9,12 @@
 <body>
   <article class="nav">
     <ul>
-      <li class="border">View Music</li>
-      <li class="border"><a href="#">Add Music</a></li>
-      <li><a href="#" class="none">Profile</a></li>
+      <li><a href="#" id="viewMusic">View Music</a></li>
+      <li><a href="#" id="addMusic">Add Music</a></li>
+      <li><a href="#" id="profile" class="none">Profile</a></li>
     </ul>
   </article>
-  <section class="options">
+  <section id="options" class="options">
     <form action="" method="">
       <!-- <fieldset> -->
         <label put="songlength">Song Length:</label>
@@ -73,41 +73,53 @@
                 <label put="Hiphop">Hip hop</label>
               </td>
           </table>
-          <a href="#" class="filter">Filter</a>
+          <div class="div">
+            <a href="#" class="filter">Filter</a>
+          </div>
           <!-- <button>Filter</button> -->
         <!-- </fieldset> -->
       </form>
     </section>
-    <section class="songlist">
+    <section id="songlist" class="songlist">
       <h1>Song Name</h1>
       <ul>
-        <li class="border">Artist Name</li>
-        <li class="border">Album Name</li>
+        <li>Artist Name</li>
+        <li>Album Name</li>
         <li>Genre</li>
       </ul>
       <br>
       <h1>Song Name</h1>
       <ul>
-        <li class="border">Artist Name</li>
-        <li class="border">Album Name</li>
+        <li>Artist Name</li>
+        <li>Album Name</li>
         <li>Genre</li>
       </ul>
       <br>
       <h1>Song Name</h1>
       <ul>
-        <li class="border">Artist Name</li>
-        <li class="border">Album Name</li>
+        <li>Artist Name</li>
+        <li>Album Name</li>
         <li>Genre</li>
       </ul>
       <br>
       <h1>Song Name</h1>
       <ul>
-        <li class="border">Artist Name</li>
-        <li class="border">Album Name</li>
+        <li>Artist Name</li>
+        <li>Album Name</li>
         <li>Genre</li>
       </ul>
     </section>
+
+    <section id='musicForm'>
+      <br>
+      <input class='input' type="text" placeholder="songName" id="songName">
+      <input class='input' type="text" placeholder="artistName" id="artistName">
+      <input class='input' type="text" placeholder="albumName" id="albumName">
+      <input class='input' type="button" id="addStuff" value="ADD">
+    </section>
+
     <footer><h6>&copy VikingPaul</h6></footer>
+    <script src="main.js"></script>
 </body>
 </html>
 
