@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -14,9 +13,9 @@
       <li><a href="#" id="profile" class="none">Profile</a></li>
     </ul>
   </article>
-  <section id="options" class="options">
-    <form action="" method="">
-      <!-- <fieldset> -->
+  <article class="flex">
+    <section id="options" class="options">
+      <form action="" method="">
         <label put="songlength">Song Length:</label>
           <input type="range" name="first">
           <br>
@@ -76,28 +75,29 @@
           <div class="div">
             <a href="#" class="filter">Filter</a>
           </div>
-          <!-- <button>Filter</button> -->
-        <!-- </fieldset> -->
-      </form>
-    </section>
-    <section id="songlist" class="songlist">
-<!--       <h1>Song Name</h1>
-      <ul>
-        <li>Artist Name</li>
-        <li>Album Name</li>
-        <li>Genre</li>
-      </ul>
-      <br> -->
-    </section>
+        </form>
+      </section>
+      <section id="songlist" class="songlist">
+        <div id="songPLacement">
+  <!--       <h1>Song Name</h1>
+        <ul>
+          <li>Artist Name</li>
+          <li>Album Name</li>
+          <li>Genre</li>
+        </ul>
+        <br> -->
+        </div>
+        <a class='right' href='#' id='more'>More ></a>
+      </section>
 
-    <section id='musicForm'>
-      <br>
-      <input class='input' type="text" placeholder="songName" id="songName">
-      <input class='input' type="text" placeholder="artistName" id="artistName">
-      <input class='input' type="text" placeholder="albumName" id="albumName">
-      <input class='input' type="button" id="addStuff" value="ADD">
-    </section>
-
+      <section id='musicForm'>
+        <br>
+        <input class='input' type="text" placeholder="songName" id="songName">
+        <input class='input' type="text" placeholder="artistName" id="artistName">
+        <input class='input' type="text" placeholder="albumName" id="albumName">
+        <input class='input' type="button" id="addStuff" value="ADD">
+      </section>
+    </article>
     <footer><h6>&copy VikingPaul</h6></footer>
     <script src="main.js"></script>
     <script src="songs.js"></script>

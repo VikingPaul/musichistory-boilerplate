@@ -1,5 +1,6 @@
 var songList = (function() {
   var funkySongs = []
+  var funkySongs2 = []
   var lastNum = 0
   return {
     getSongs: function(num) {
@@ -9,7 +10,6 @@ var songList = (function() {
       funkySongs.push(newSong)
       i = 0
       lastNum = 0
-
     },
     deleteSongs: function(num) {
       funkySongs.splice(num,1)
@@ -17,12 +17,12 @@ var songList = (function() {
       lastNum = 0
     },
     insertSongs: function() {
-      document.getElementById('songlist').innerHTML = ""
+      document.getElementById('songPLacement').innerHTML = ""
       for (var i = lastNum, j = 0; j < 4; i++, j++) {
         if (funkySongs.length === i) {
           i = 0;
           lastNum = 0;
-          // break;
+          break;
         }
         var currentSong = songList.getSongs(i)
         var nextSong = ""
@@ -30,13 +30,9 @@ var songList = (function() {
         nextSong += `<ul><li>${currentSong.artist}</li>`
         nextSong += `<li>${currentSong.album}</li></ul><button id="delete${i}">delete</button>`
 
-        document.getElementById('songlist').innerHTML += nextSong
+        document.getElementById('songPLacement').innerHTML += nextSong
       };
       lastNum = i
-      document.getElementById('songlist').innerHTML += "<a class='right' href='#' id='more'>More ></a>"
-      document.getElementById('more').addEventListener("click", function() {
-         songList.insertSongs()
-      })
     }
   }
 })()
@@ -67,7 +63,7 @@ document.getElementById('addStuff').addEventListener("click", function() {
   document.getElementById("albumName").value = ""
 })
 
-document.getElementById('songlist').addEventListener("click", function(e) {
+document.getElementById('songPLacement').addEventListener("click", function(e) {
   console.log("e", e.target.id.substring(6,e.target.id.length));
   if (e.target.id.substring(0,6) === "delete") {
     songList.deleteSongs(e.target.id.substring(6,e.target.id.length))
