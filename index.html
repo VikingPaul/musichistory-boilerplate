@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -14,30 +13,30 @@
       <li><a href="#" id="profile" class="none">Profile</a></li>
     </ul>
   </article>
-  <section id="options" class="options">
-    <form action="" method="">
-      <!-- <fieldset> -->
+  <article class="flex">
+    <section id="options" class="options">
+      <form action="" method="">
         <label put="songlength">Song Length:</label>
           <input type="range" name="first">
           <br>
           <label put="Album">Album:</label>
           <br>
           <select name="Album">
-            <option value="">Random</option>
-            <option value="">Random</option>
-            <option value="">Random</option>
-            <option value="">Random</option>
-            <option value="">Random</option>
+            <option value="">Select One</option>
+            <option value="">As Cruel as School Children</option>
+            <option value="">Third Eye Blind(Self Titled)</option>
+            <option value="">Blink-182(Self Titled)</option>
+            <option value="">Weezer(The Blue Album)</option>
           </select>
           <br>
           <label put="Artist">Artist:</label>
           <br>
           <select name="Artist">
-            <option value="">Random</option>
-            <option value="">Random</option>
-            <option value="">Random</option>
-            <option value="">Random</option>
-            <option value="">Random</option>
+            <option value="">Select One</option>
+            <option value="">Gym Class Heros</option>
+            <option value="">Third Eye Blind</option>
+            <option value="">Blink-182</option>
+            <option value="">Weezer</option>
           </select>
           <br>
           <label>Genre:</label>
@@ -76,50 +75,32 @@
           <div class="div">
             <a href="#" class="filter">Filter</a>
           </div>
-          <!-- <button>Filter</button> -->
-        <!-- </fieldset> -->
-      </form>
-    </section>
-    <section id="songlist" class="songlist">
-      <h1>Song Name</h1>
-      <ul>
-        <li>Artist Name</li>
-        <li>Album Name</li>
-        <li>Genre</li>
-      </ul>
-      <br>
-      <h1>Song Name</h1>
-      <ul>
-        <li>Artist Name</li>
-        <li>Album Name</li>
-        <li>Genre</li>
-      </ul>
-      <br>
-      <h1>Song Name</h1>
-      <ul>
-        <li>Artist Name</li>
-        <li>Album Name</li>
-        <li>Genre</li>
-      </ul>
-      <br>
-      <h1>Song Name</h1>
-      <ul>
-        <li>Artist Name</li>
-        <li>Album Name</li>
-        <li>Genre</li>
-      </ul>
-    </section>
+        </form>
+      </section>
+      <section id="songlist" class="songlist">
+        <div id="songPLacement">
+  <!--       <h1>Song Name</h1>
+        <ul>
+          <li>Artist Name</li>
+          <li>Album Name</li>
+          <li>Genre</li>
+        </ul>
+        <br> -->
+        </div>
+        <a class='right' href='#' id='more'>More ></a>
+      </section>
 
-    <section id='musicForm'>
-      <br>
-      <input class='input' type="text" placeholder="songName" id="songName">
-      <input class='input' type="text" placeholder="artistName" id="artistName">
-      <input class='input' type="text" placeholder="albumName" id="albumName">
-      <input class='input' type="button" id="addStuff" value="ADD">
-    </section>
-
+      <section id='musicForm'>
+        <br>
+        <input class='input' type="text" placeholder="songName" id="songName">
+        <input class='input' type="text" placeholder="artistName" id="artistName">
+        <input class='input' type="text" placeholder="albumName" id="albumName">
+        <input class='input' type="button" id="addStuff" value="ADD">
+      </section>
+    </article>
     <footer><h6>&copy VikingPaul</h6></footer>
     <script src="main.js"></script>
+    <script src="songs.js"></script>
 </body>
 </html>
 

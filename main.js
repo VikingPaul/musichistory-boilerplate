@@ -9,3 +9,6 @@ function viewMusic() {
   document.getElementById('songlist').style.visibility = "visible"
   document.getElementById('musicForm').style.visibility = "hidden"
 }
+document.getElementById('more').addEventListener("click", function() {
+   songList.insertSongs()
+})
