@@ -1,14 +1,15 @@
-document.getElementById('addMusic').addEventListener("click", function() {
-  document.getElementById('options').style.visibility = "hidden"
-  document.getElementById('songlist').style.visibility = "hidden"
-  document.getElementById('musicForm').style.visibility = "visible"
+$('#musicForm').hide()
+$('#addMusic').click(function() {
+  $('#options').hide()
+  $('#songlist').hide()
+  $('#musicForm').show()
 })
-document.getElementById('viewMusic').addEventListener("click", viewMusic)
+$('#viewMusic').click(viewMusic)
 function viewMusic() {
-  document.getElementById('options').style.visibility = "visible"
-  document.getElementById('songlist').style.visibility = "visible"
-  document.getElementById('musicForm').style.visibility = "hidden"
+  $('#options').show()
+  $('#songlist').show()
+  $('#musicForm').hide()
 }
-document.getElementById('more').addEventListener("click", function() {
+$('#more').click(function() {
    songList.insertSongs()
 })
