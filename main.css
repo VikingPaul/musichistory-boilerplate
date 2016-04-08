@@ -79,7 +79,6 @@ form {
     color:black;
 }
 #musicForm {
-    visibility: hidden;
     width: 20%;
     position: absolute;
     left: 40%;

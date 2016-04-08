@@ -17,7 +17,7 @@ var songList = (function() {
       lastNum = 0
     },
     insertSongs: function() {
-      document.getElementById('songPLacement').innerHTML = ""
+      $('#songPLacement').html("")
       for (var i = lastNum, j = 0; j < 4; i++, j++) {
         if (funkySongs.length === i) {
           i = 0;
@@ -30,41 +30,39 @@ var songList = (function() {
         nextSong += `<ul><li>${currentSong.artist}</li>`
         nextSong += `<li>${currentSong.album}</li></ul><button id="delete${i}">delete</button>`
 
-        document.getElementById('songPLacement').innerHTML += nextSong
+        $('#songPLacement').append(nextSong)
       };
       lastNum = i
     }
   }
 })()
 
-var dude = new XMLHttpRequest();
-dude.addEventListener("load", songsOnLoad);
-dude.open("GET", "songs.json");
-dude.send();
+$.ajax({
+  url: "songs.json",
+  success: songsOnLoad
+})
 
-function songsOnLoad() {
-  var song = JSON.parse(this.responseText)
+function songsOnLoad(song) {
   for (i in song.songs) {
     songList.addSongs(song.songs[i]);
   }
   songList.insertSongs()
 }
 
-document.getElementById('addStuff').addEventListener("click", function() {
+$('#addStuff').click(function() {
   var newObject = {}
-  newObject.title = document.getElementById("songName").value
-  newObject.artist = document.getElementById("artistName").value
-  newObject.album = document.getElementById("albumName").value
+  newObject.title = $("#songName").val()
+  newObject.artist = $("artistName").val()
+  newObject.album = $("albumName").val()
   songList.addSongs(newObject)
   viewMusic()
   songList.insertSongs()
-  document.getElementById("songName").value = ""
-  document.getElementById("artistName").value = ""
-  document.getElementById("albumName").value = ""
+  $("#songName").val("")
+  $("#artistName").val("")
+  $("#albumName").val("")
 })
 
-document.getElementById('songPLacement').addEventListener("click", function(e) {
-  console.log("e", e.target.id.substring(6,e.target.id.length));
+$('#songPLacement').click(function(e) {
   if (e.target.id.substring(0,6) === "delete") {
     songList.deleteSongs(e.target.id.substring(6,e.target.id.length))
     songList.insertSongs()
