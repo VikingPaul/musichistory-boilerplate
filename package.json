@@ -1,0 +1,25 @@
+{
+  "name": "musichistory-boilerplate",
+  "version": "1.0.0",
+  "description": "This is the project that you will be working for your individual work throughout the entire front end course. Don't worry, you'll be building lots of other applications, but when you learn a new technique, library or language, you'll be cutting your teeth with it on Music History.",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp-sass": "^2.3.1",
+    "gulp-watch": "^4.3.5",
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VikingPaul/musichistory-boilerplate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VikingPaul/musichistory-boilerplate/issues"
+  },
+  "homepage": "https://github.com/VikingPaul/musichistory-boilerplate#readme"
+}
