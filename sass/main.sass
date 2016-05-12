@@ -1,10 +1,17 @@
 $stock-border: 2px solid black
 
+html
+  background: url(../music.jpg) no-repeat center center fixed
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+
 .flex
   display: flex
   flex-direction: row
   flex-wrap: wrap
-  justify-content: space-between
+  justify-content: space-around
 
 .right
   float: right
@@ -91,7 +98,7 @@ footer
 
 ul
   li:nth-child(n+2)
-    border-left: 2px solid black
+    border-left: $stock-border
 
 
 
