@@ -19,10 +19,16 @@ var songList = (function() {
       lastNum = 0;
     },
     deleteSongs: function(num) {
-      funkySongs.splice(num,1);
-      funkyKeys.splice(num,1);
-      i = 0;
-      lastNum = 0;
+
+      $.ajax({
+        url: `https://resplendent-torch-2777.firebaseio.com/songs/${funkyKeys[num]}.json`,
+        type: "DELETE"
+      }).done(function(){
+        funkySongs.splice(num,1);
+        funkyKeys.splice(num,1);
+        i = 0;
+        lastNum = 0;
+      });
     },
     insertSongs: function() {
       $('#songPLacement').html("");
