@@ -1,24 +1,24 @@
 {
-  "songs": [
-    {
+  "songs": {
+    "one": {
       "title": "The Sound of Silence",
       "artist": "Disturbed",
       "album": "Immortalized"
     },
-    {
+    "two": {
       "title": "The Sound of Silence",
       "artist": "Simon & Garfunkel",
       "album": "Sounds of Silence"
     },
-    {
+    "three": {
       "title": "Ninja Rap",
       "artist": "Vanilla Ice",
       "album": "TMNT II Soundtrack"
     },
-    {
+    "four": {
       "title": "Still Alive",
       "artist": "Jonathan Coulton",
       "album": "Portal Soundtrack"
     }
-  ]
+  }
 }

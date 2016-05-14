@@ -1,20 +1,26 @@
 "use strict";
+var newSongs = 0
 var songList = (function() {
   var i;
   var funkySongs = [];
-  var funkySongs2 = [];
+  var funkyKeys = []
   var lastNum = 0;
   return {
+    getKeys: function() {
+      return funkyKeys
+    },
     getSongs: function(num) {
       return funkySongs[num];
     },
-    addSongs: function(newSong) {
+    addSongs: function(newSong, songKey) {
       funkySongs.push(newSong);
+      funkyKeys.push(songKey)
       i = 0;
       lastNum = 0;
     },
     deleteSongs: function(num) {
       funkySongs.splice(num,1);
+      funkyKeys.splice(num,1);
       i = 0;
       lastNum = 0;
     },
@@ -39,29 +45,42 @@ var songList = (function() {
   };
 })();
 
+
 $.ajax({
-  url: "json/songs.json",
+  url: "https://resplendent-torch-2777.firebaseio.com/songs.json",
   success: songsOnLoad
 });
 
 function songsOnLoad(song) {
-  for (let i in song.songs) {
-    songList.addSongs(song.songs[i]);
+  for (let i in song) {
+    songList.addSongs(song[i], i);
   }
   songList.insertSongs();
 }
 
 $('#addStuff').click(function() {
-  let newObject = {};
-  newObject.title = $("#songName").val();
-  newObject.artist = $("#artistName").val();
-  newObject.album = $("#albumName").val();
-  songList.addSongs(newObject);
-  viewMusic();
-  songList.insertSongs();
-  $("#songName").val("");
-  $("#artistName").val("");
-  $("#albumName").val("");
+
+  let newSong = {
+      "title": $("#songName").val(),
+      "album": $("#albumName").val(),
+      "artist": $("#artistName").val()
+  }
+  $.ajax({
+    url: "https://resplendent-torch-2777.firebaseio.com/songs.json",
+    type: "POST",
+    data: JSON.stringify(newSong)
+  }).done(function(KeyOfStuff){
+    console.log("it saved");
+    songList.addSongs(newSong, KeyOfStuff.name)
+    viewMusic();
+    songList.insertSongs();
+    $("#songName").val("");
+    $("#artistName").val("");
+    $("#albumName").val("");
+  })
+
+
+
 });
 
 $('#songPLacement').click(function(e) {
