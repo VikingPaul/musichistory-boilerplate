@@ -1,24 +1,24 @@
 {
-  "songs": [
-    {
+  "songs": {
+    "songs1": {
       "title": "Cupid's Chokehold",
       "artist": "Gym Class Heros",
       "album": "As Cruel as School Children"
     },
-    {
+    "songs2": {
       "title": "Jumper",
       "artist": "Third Eye Blind",
       "album": "Third Eye Blind(Self Titled)"
     },
-    {
+    "songs3": {
       "title": "I Miss You",
       "artist": "Blink-182",
       "album": "Blink-182(Self Titled)"
     },
-    {
+    "songs4": {
       "title": "Undone (The Sweater Song)",
       "artist": "Weezer",
       "album": "Weezer(The Blue Album)"
     }
-  ]
+  }
 }
