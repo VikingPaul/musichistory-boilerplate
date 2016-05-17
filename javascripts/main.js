@@ -4,6 +4,7 @@ $('#addMusic').click(function() {
   $('#options').hide();
   $('#songlist').hide();
   $('#musicForm').show();
+  type = "POST";
 });
 $('#viewMusic').click(viewMusic);
 function viewMusic() {
@@ -11,6 +12,3 @@ function viewMusic() {
   $('#songlist').show();
   $('#musicForm').hide();
 }
-$('#more').click(function() {
-   songList.insertSongs();
-});
